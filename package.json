@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
-    "cypress:run": "cypress run",
+    "start": "node --experimental-specifier-resolution=node --loader=ts-node/esm server.ts",
+    "cypress:run": "npm start & cypress run --e2e",
     "cypress:open": "cypress open",
     "cypress:verify": "cypress verify",
     "cypress:version": "cypress version",
@@ -17,7 +18,9 @@
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "license": "ISC",
   "devDependencies": {
-    "ok-file": "1.5.2"
+    "cypress": "10.3.0",
+    "ok-file": "1.5.2",
+    "ts-node": "10.7.0"
   },
   "repository": {
     "type": "git",
